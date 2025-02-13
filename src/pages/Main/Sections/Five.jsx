@@ -30,23 +30,39 @@ const Five = () => {
     return (
         <section className="bg-white py-10 px-6 sm:px-12">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-lg sm:text-xl font-medium text-gray-700">
-                    Trusted by over <span className="font-semibold">16,000 companies</span> and
-                    millions of learners worldwide.
-                </h2>
+                <div className="flex items-center justify-between">
 
-                <div className="mt-3 w-20 h-1 bg-black"></div>
-
-                <div className="flex items-center justify-between mt-6">
-                    {/* Левая стрелка */}
+                    <h2 className="text-lg sm:text-xl font-medium text-gray-700 flex-grow text-center">
+                        Trusted by over <span className="font-semibold">16,000 companies</span> and
+                        millions of learners worldwide.
+                    </h2>
                     <button
-                        className="hidden sm:block text-gray-500 hover:text-black cursor-pointer"
+                        className="text-gray-500 hover:text-black cursor-pointer"
                         onClick={prevSlide}
                     >
                         <ArrowLeft />
                     </button>
 
-                    {/* Слайдер */}
+                    <span className="w-px mx-5 h-6 bg-gray-500"></span>
+
+                    <button
+                        className="text-gray-500 hover:text-black cursor-pointer"
+                        onClick={nextSlide}
+                    >
+                        <ArrowRight size={20} />
+                    </button>
+                </div>
+
+
+                <div className="mt-3 w-full h-1 bg-gray-200 relative">
+                    <div
+                        className="absolute top-0 left-0 h-full bg-black"
+                        style={{ width: `${((currentIndex + 1) / slides.length) * 100}%` }}
+                    ></div>
+                </div>
+
+
+                <div className="flex items-center justify-center mt-6">
                     <div className="flex-1 mx-6 overflow-hidden relative">
                         <div
                             className="flex transition-transform duration-500"
@@ -63,14 +79,6 @@ const Five = () => {
                             ))}
                         </div>
                     </div>
-
-                    {/* Правая стрелка */}
-                    <button
-                        className="hidden sm:block text-gray-500 hover:text-black cursor-pointer"
-                        onClick={nextSlide}
-                    >
-                        <ArrowRight size={20} />
-                    </button>
                 </div>
             </div>
         </section>
