@@ -1,10 +1,15 @@
 import React from 'react';
+import First from './Sections/First';
+import Second from './Sections/Second';
+
 
 const Main = () => {
+
     return (
-        <div>
-            Main
-        </div>
+        <main>
+            <First />
+            <Second />
+        </main>
     );
 };
 

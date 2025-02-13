@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { Burger } from '../../ui/icons';
 
 const Layout = () => {
 
-    const [active, setActive] = useState("Home");
+    const [active, setActive] = useState("/");
     const [menuOpen, setMenuOpen] = useState(false)
     const links = ["Main", "About course", "Certification", "About OAA", "Community"];
 
@@ -13,7 +14,7 @@ const Layout = () => {
                 <nav className="flex justify-between items-center px-6 py-1 relative  bg-white">
                     <div className='flex items-center'>
                         <div className="flex items-center ">
-                            <img width="100px" src="./images/header/logo.png" alt="Logo" className='absolute left-0 ml-3' style={{ top: "-6px" }} />
+                            <img width="100px" src="./images/Header/logo.png" alt="Logo" className='absolute left-0 ml-3' style={{ top: "-6px" }} />
                         </div>
 
                         <ul className={`absolute top-16 left-0 w-full ml-28 bg-white p-6 shadow-md transform ${menuOpen ? "block" : "hidden"} md:flex md:static md:p-0 md:shadow-none md:space-x-6 md:w-auto md:bg-transparent ml-30`}>
@@ -38,7 +39,7 @@ const Layout = () => {
                         <span className="mx-3">|</span>
                         <Link to="/signin" className="text-black text-lg hover:underline">Sign in</Link>
                         <button className="ml-4 text-black text-xl md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-                            ☰
+                           <Burger />
                         </button>
                     </div>
                 </nav>
@@ -46,7 +47,7 @@ const Layout = () => {
 
             <Outlet />
 
-            <footer>
+            <footer style={{ height: '20vh', background: '#000' }}>
                 Footer
             </footer>
         </>
