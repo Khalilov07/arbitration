@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { Burger } from '../../ui/icons';
+import { FaWhatsapp, FaTelegram, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 const Layout = () => {
 
@@ -39,7 +40,7 @@ const Layout = () => {
                         <span className="mx-3">|</span>
                         <Link to="/signin" className="text-black text-lg hover:underline">Sign in</Link>
                         <button className="ml-4 text-black text-xl md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-                           <Burger />
+                            <Burger />
                         </button>
                     </div>
                 </nav>
@@ -47,8 +48,51 @@ const Layout = () => {
 
             <Outlet />
 
-            <footer style={{ height: '20vh', background: '#000' }}>
-                Footer
+            <footer className="bg-[#402d1d] text-white py-12 px-6 sm:px-12">
+                <div className="max-w-5xl  grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-4">Pages</h3>
+                        <ul className="space-y-2">
+                            {["Home", "About", "Courses", "Blog", "Contact"].map((page, index) => (
+                                <li key={index} className="hover:text-[#c6a982] transition">
+                                    <a href="#">{page}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-4">Contacts</h3>
+                        <div className="text-[#c6c0bb] text-sm">
+                            <p className="mb-1">Phone number</p>
+                            <p className="text-white text-lg font-medium">+ (2) 578-345-789</p>
+                        </div>
+                        <div className="text-[#c6c0bb] text-sm mt-4">
+                            <p className="mb-1">E-mail</p>
+                            <p className="text-white text-lg font-medium">info@academy.com</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-4">Social Media</h3>
+                        <div className="space-y-2 flex flex-wrap items-center gap-4">
+                            {[
+                                { icon: <FaWhatsapp />, name: "WhatsApp" },
+                                { icon: <FaTelegram />, name: "Telegram" },
+                                { icon: <FaInstagram />, name: "Instagram" },
+                                { icon: <FaFacebook />, name: "Facebook" },
+                                { icon: <FaYoutube />, name: "YouTube" }
+                            ].map((social, index) => (
+                                <div key={index} className="flex items-center justify-center gap-2 text-lg hover:text-[#c6a982] transition cursor-pointer">
+                                    <span className="text-2xl">{social.icon}</span>
+                                    <span>{social.name}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                </div>
             </footer>
         </>
     );

@@ -3,18 +3,20 @@ import React from 'react';
 const Second = () => {
     const styles = {
         img: {
-            minHeight: "80vh",
-            background: "rgba(174, 145, 116, 1)",
-            backgroundImage: "url('./images/Main/SecondBackground.png')", 
-            backgroundSize: "cover", 
-            backgroundPosition: "center", 
+            minHeight: "85vh",
+            background: "rgba(174, 145, 116)",
+            backgroundImage: "url('./images/Main/SecondBackground.png')",
+            backgroundSize: "40%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             backgroundBlendMode: "overlay",
         },
-    }
-    return (
-        <section className="px-6 sm:px-8 md:px-12 lg:px-16 py-12 text-white" style={styles.img}>
-            <div className="mx-auto">
+    };
 
+
+    return (
+        <section className="relative px-6 sm:px-8 md:px-12 lg:px-16 py-12 text-white" style={styles.img}>
+            <div className="mx-auto">
                 <div className="mb-6">
                     <h3 className="text-lg sm:text-xl font-light uppercase text-left">ABOUT COURSE</h3>
                     <h2 className="text-3xl sm:text-2xl font-medium text-left mt-2">About course</h2>
@@ -42,26 +44,25 @@ const Second = () => {
                     the course contents, as well as the list of instructors, may be subject to modifications.
                 </p>
 
-                <div className="mt-8 flex justify-center items-start gap-8 flex-wrap">
-                    {[
-                        { title: "TOPICS", value: "10+" },
-                        { title: "LECTURES", value: "25+" },
-                        { title: "TTL DURATION", value: "50h" },
-                    ].map((item, index) => (
+                <div className="mt-8 flex justify-center items-start gap-12 flex-wrap">
+                    {[{ title: "TOPICS", value: "10+" }, { title: "LECTURES", value: "25+" }, { title: "TTL DURATION", value: "50h" }].map((item, index) => (
                         <div key={index} className="flex flex-col items-center w-1/5">
                             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#c6a982] shadow-lg flex items-center justify-center rounded-full text-2xl font-bold">
                                 {item.value}
                             </div>
-                            <p className="mt-3 text-lg sm:text-sm font-semibold text-center">{item.title}</p>
+                            <p className="mt-3 text-lg sm:text-base font-semibold text-center">{item.title}</p>
                         </div>
                     ))}
                 </div>
             </div>
+
+            <button className="absolute left-1/2 -translate-x-1/2 -bottom-7 bg-[#402d1d] text-white 
+                   text-lg font-semibold 2xl w-72 sm- py-4 rounded-lg shadow-lg">
+                Learn More
+            </button>
+
+
         </section>
-
-
-
-
     );
 };
 
