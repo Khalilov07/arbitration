@@ -76,7 +76,7 @@ const Layout = () => {
 
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Social Media</h3>
-                        <div className="space-y-2 flex flex-wrap items-center gap-4">
+                        <div className="space-y-2 flex flex-wrap items-end gap-5">
                             {[
                                 { icon: <FaWhatsapp />, name: "WhatsApp" },
                                 { icon: <FaTelegram />, name: "Telegram" },
@@ -84,7 +84,7 @@ const Layout = () => {
                                 { icon: <FaFacebook />, name: "Facebook" },
                                 { icon: <FaYoutube />, name: "YouTube" }
                             ].map((social, index) => (
-                                <div key={index} className="flex items-center justify-center gap-2 text-lg hover:text-[#c6a982] transition cursor-pointer">
+                                <div key={index} className="flex items-start justify-center gap-2 text-sm  hover:text-[#c6a982] transition cursor-pointer">
                                     <span className="text-2xl">{social.icon}</span>
                                     <span>{social.name}</span>
                                 </div>

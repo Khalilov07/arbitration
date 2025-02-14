@@ -75,7 +75,7 @@ const Five = () => {
                 <div className="flex items-center justify-center mt-6">
                     <div className="flex-1 mx-6 overflow-hidden relative">
                         <div
-                            className="flex transition-transform duration-500"
+                            className="flex gap-5 items-center justify-center transition-transform duration-500"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
                             {slides.map((slide, index) => (
