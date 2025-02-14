@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Second = () => {
     const styles = {
@@ -12,6 +13,13 @@ const Second = () => {
             backgroundBlendMode: "overlay",
         },
     };
+
+    const TextRound = styled.p`
+        @media (max-width: 440) {
+            font-size: 1px;
+            color: red;
+        }
+    `
 
 
     return (
@@ -50,7 +58,7 @@ const Second = () => {
                             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#c6a982] shadow-lg flex items-center justify-center rounded-full text-2xl font-bold">
                                 {item.value}
                             </div>
-                            <p className="mt-3 text-lg sm:text-base font-semibold text-center">{item.title}</p>
+                            <TextRound className="mt-3 text-lg  font-semibold text-center">{item.title}</TextRound>
                         </div>
                     ))}
                 </div>
