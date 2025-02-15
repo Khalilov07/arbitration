@@ -8,7 +8,6 @@ const Layout = () => {
     const [active, setActive] = useState("/");
     const [menuOpen, setMenuOpen] = useState(false)
     const links = ["Main", "About course", "Certification", "About OAA", "Community"];
-    const route = ["/", "/cboutcourse", "Certification", "AboutOAA", "Community"];
 
     return (
         <>
@@ -19,7 +18,7 @@ const Layout = () => {
                             <img width="100px" src="./images/Header/logo.png" alt="Logo" className='absolute left-0 ml-3 z-50'  style={{ top: "-6px" }} />
                         </div>
 
-                        <ul className={`absolute top-16 left-0 w-full ml-28 bg-white p-6 shadow-md transform ${menuOpen ? "block" : "hidden"} md:flex md:static md:p-0 md:shadow-none md:space-x-6 md:w-auto md:bg-transparent ml-30`}>
+                        <ul className={`absolute top-16 left-0 w-full ml-28 bg-white z-50 p-6 shadow-md transform ${menuOpen ? "block" : "hidden"} md:flex md:static md:p-0 md:shadow-none md:space-x-6 md:w-auto md:bg-transparent ml-30`}>
                             {links.map((link) => {
                                 const formattedLink = link === "Main" ? "/" : `/${link.trim().toLowerCase().replace(/\s+/g, '')}`;
                                 return (

@@ -36,11 +36,7 @@ const First = () => {
                 <div></div>
                 <PlayMusic style={styles.playIcon} />
 
-                <Link
-                    to="https://youtube.com"
-                    className="cursor-pointer absolute inset-0 flex justify-center items-center z-10"
-                    target="_blank"
-                />
+                
 
                 <div className="w-full absolute" style={styles.text}>
                     <h2 className="text-white text-center text-xl sm:text-xl md:text-xl lg:text-3xl pb-10">
