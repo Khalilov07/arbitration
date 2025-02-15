@@ -56,8 +56,8 @@ const Third = () => {
 
     return (
         <section className="bg-white py-16 px-6 sm:px-12 md:px-16 lg:px-24 text-black text-center">
-            <h2 className="text-3xl sm:text-4xl font-semibold">Meet Our International Arbitration Icons</h2>
-            <p className="text-lg sm:text-xl mt-4 text-gray-600">
+            <h2 className="text-3xl sm:text-4xl font-semibold uppercase ">Meet Our International Arbitration Icons</h2>
+            <p className="text-lg sm:text-sm mt-4 text-gray-600">
                 Online Arbitration Academy – Shaping Global Experts, One Case at a Time.
             </p>
 

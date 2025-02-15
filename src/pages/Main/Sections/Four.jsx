@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const Four = () => {
     const styles = {
@@ -28,8 +29,8 @@ const Four = () => {
             flex: "1 1 50%",
         },
         statsContainer: {
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
+            display:'flex',
+            flexWrap: 'wrap',
             gap: "1rem",
             width: "100%",
             marginTop: "2rem",
@@ -38,12 +39,11 @@ const Four = () => {
         },
         statItem: {
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            flex: "1",
-            fontSize: "1.25rem",
+            width: '180px',
             fontWeight: "bold",
+            fontSize: "1.25rem",
+            textAlign: "center",
+            flexDirection: "column",
         },
         divider: {
             width: "2px",
@@ -51,6 +51,12 @@ const Four = () => {
             backgroundColor: "rgba(217, 217, 217, 1)",
         },
     };
+
+    const Static = styled.div`
+        @media(max-width: 1032px) {
+            width: 45% !important;
+        }
+    `
 
     const stats = [
         { title: "TOPICS", value: "10+" },
@@ -86,14 +92,14 @@ const Four = () => {
                 </div>
 
                 <div className="flex flex-col items-center w-full">
-                    <div style={styles.statsContainer} className="flex-wrap">
+                    <div style={styles.statsContainer} className="flex-wrap justify-start  sm:justify-around">   
                         {stats.map((item, index) => (
                             <React.Fragment key={index}>
                                 {index !== 0 && <div style={styles.divider} className="hidden sm:block"></div>}
-                                <div style={styles.statItem}>
-                                    <span className="text-2xl sm:text-5xl">{item.value}</span>
-                                    <span className="text-sm sm:text-base text-black mt-1">{item.title}</span>
-                                </div>
+                                <Static style={styles.statItem} className="justify-around items-center">
+                                    <span className="text-4xl sm:text-6xl">{item.value}</span>
+                                    <span className="text-sm opacity-80 text-[#161616]">{item.title}</span>
+                                </Static>
                             </React.Fragment>
                         ))}
                     </div>

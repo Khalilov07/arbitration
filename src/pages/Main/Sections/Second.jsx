@@ -65,7 +65,7 @@ const Second = () => {
             </div>
 
             <button className="absolute left-1/2 -translate-x-1/2 -bottom-7 bg-[#402d1d] text-white 
-                   text-lg font-semibold 2xl w-72 sm- py-4 rounded-lg shadow-lg">
+                   text-sm font-semibold 2xl w-72 sm- py-4 rounded-lg shadow-lg">
                 Learn More
             </button>
 
