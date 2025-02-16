@@ -22,7 +22,7 @@ const Second = () => {
     `
 
     return (
-        <section className="bg-[#ae9174] min-h-screen flex flex-col md:flex-row">
+        <section className="bg-[#ae9174] min-h-screen flex flex-col md:flex-row pb-10">
             <div className="w-full md:w-1/4 bg-[#ae9174] flex md:flex-col ">
                 <button
                     className={`w-full font-normal flex justify-between items-center p-4 transition-all duration-300 uppercase ${activeTab === "info1" ? "bg-[#402d1d] text-white" : "bg-white text-black"

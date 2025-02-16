@@ -4,6 +4,8 @@ import NotFound from './components/NotFound/NotFound';
 import Layout from './components/Layout/Layout';
 import Main from './pages/Main/Main';
 import AboutCourse from './pages/AboutCourse/AboutCourse';
+import Signin from './pages/Signin/Signin';
+import Signup from './pages/Signup/Signup';
 
 const App = () => {
 
@@ -13,7 +15,9 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
-          <Route  path='aboutcourse' element={<AboutCourse />} />
+          <Route path='aboutoaa' element={<AboutCourse />} />
+          <Route path='signup' element={<Signup />} />
+          <Route path='signin' element={<Signin />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>

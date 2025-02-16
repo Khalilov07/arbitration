@@ -40,7 +40,7 @@ const Layout = () => {
 
                     </div>
                     <div className="flex items-center">
-                        <Link to="/login" className="text-black text-lg hover:underline">Login</Link>
+                        <Link to="/signup" className="text-black text-lg hover:underline">Login</Link>
                         <span className="mx-3">|</span>
                         <Link to="/signin" className="text-black text-lg hover:underline">Sign in</Link>
                         <button className="ml-4 text-black text-xl md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
