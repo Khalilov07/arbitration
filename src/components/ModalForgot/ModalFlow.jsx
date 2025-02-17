@@ -1,5 +1,49 @@
 import React, { useState, useRef, useEffect } from "react";
 import ModalForgot from "./ModalForgot";
+import styled from "styled-components";
+import { TextField } from "@mui/material";
+import { Link } from "react-router-dom";
+
+const InputWrapper = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+const StyledInput = styled.input`
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+
+  &:focus {
+    border-color: #999;
+  }
+
+  &:focus + label,
+  &:not(:placeholder-shown) + label {
+    top: 2px;
+    font-size: 12px;
+    color: #999;
+    background: white;
+    padding: 0 5px;
+    left: 10px;
+  }
+`;
+
+const Label = styled.label`
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+  background: white;
+`;
 
 const ModalFlow = ({ isOpen, onClose }) => {
     const [step, setStep] = useState(1);
@@ -63,19 +107,30 @@ const ModalFlow = ({ isOpen, onClose }) => {
         <ModalForgot isOpen={isOpen} onClose={onClose}>
 
             {step === 1 && (
-                <>
-                    <h2>Reset Password</h2>
-                    <p>Enter your email address</p>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="border p-2 w-full"
-                    />
-                    <button className="bg-blue-500 text-white p-2 mt-4 w-full" onClick={handleNextStep}>
-                        Send Code
+                <div className="flex flex-col gap-4">
+                    <h2 className="text-3xl font-semibold">Password recovery</h2>
+                    <p className="text-xs sm:text-sm text-[#1E1E1E] opacity-80"
+                    >To recover your password, enter your phone number, <br /> to which a link will be sent to complete the recovery <br /> of access</p>
+                    <InputWrapper>
+                        <StyledInput
+                            type="password"
+                            placeholder=""
+                        />
+                        <Label>E-mail</Label>
+                    </InputWrapper>
+
+
+                    <button className="bg-[#402D1D] rounded-xl text-lg text-white py-3 mt-4 w-full" onClick={handleNextStep}>
+                        Receive the code
                     </button>
-                </>
+
+                    <p className="text-[#402D1D] text-xs sm:text-base  flex items-center justify-center gap-2">Do you already have an account?
+                        <Link to='/signin' style={{ borderBottom: '1px solid ' }}>Login in</Link>
+                    </p>
+                    <p className="text-[#402D1D] text-xs sm:text-base flex items-center justify-center gap-2">Don't have an account?
+                        <Link to='/signup' style={{ borderBottom: '1px solid ' }}>Sign up</Link>
+                    </p>
+                </div>
             )}
 
             {step === 2 && (
@@ -126,16 +181,32 @@ const ModalFlow = ({ isOpen, onClose }) => {
 
             {step === 3 && (
                 <>
-                    <h2>Set a New Password</h2>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="border p-2 w-full"
-                    />
-                    <button className="bg-blue-500 text-white p-2 mt-4 w-full" onClick={onClose}>
-                        Change Password
-                    </button>
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-3xl font-semibold">Change password</h2>
+                        <p className="text-sm text-[#1E1E1E] opacity-80"
+                        >The password must contain at least 6 characters including  numbers, letters and special characters(!%$@).</p>
+                        <InputWrapper>
+                            <StyledInput
+                                type="password"
+                                placeholder=""
+                            />
+                            <Label>Enter password</Label>
+                        </InputWrapper>
+
+                        <InputWrapper>
+                            <StyledInput
+                                type="password"
+                                placeholder=""
+                            />
+                            <Label>Confirm password</Label>
+                        </InputWrapper>
+
+
+                        <button className="bg-[#402D1D] rounded-xl text-lg text-white py-3 mt-4 w-full font-semibold">
+                            Log in
+                        </button>
+
+                    </div>
                 </>
             )}
         </ModalForgot>
