@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Apple, Google } from '../../ui/icons';
 import styled from 'styled-components';
-import ModalFlow from '../../components/ModalForgot/ModalFlow';
+import Modal from '../../components/Modal/Modal';
 
 const Input = styled.input`
 padding: 12px 16px; 
@@ -14,7 +14,7 @@ color: #1C1B1F;
 const TextLink = styled.span`
 font-size: 15px;
 font-weight: 600;
-text-align: 'right';
+border-bottom: 1px solid #FFF;
 `
 
 const Button = styled.button`
@@ -36,11 +36,9 @@ const Wrapper = styled.div`
 } 
 `
 
-const Signin = () => {
+const Forget = () => {
 
-
-    const [isForgotOpen, setIsForgotOpen] = useState(false);
-
+    const [submit, setSubmit] = useState(false)
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -55,10 +53,11 @@ const Signin = () => {
 
     const onFinish = (e) => {
         e.preventDefault();
-        if (!formData.email || !formData.password) {
+        if (!formData.email || !formData.password || !formData.confirmPassword) {
             alert("Please fill in all fields!");
             return;
         }
+        setSubmit(true)
     };
 
     const styles = {
@@ -92,15 +91,15 @@ const Signin = () => {
                     value={formData.password}
                     onChange={handleChange}
                 />
-                <p className='text-right text-[#C6A982]'>
-                    <Link onClick={() => setIsForgotOpen(true)}><TextLink>Forgot your password?</TextLink></Link>
+                <p className='text-right'>
+                    <Link to='/forgot' className='text-[#C6A982]'>Forgot your password?</Link>
                 </p>
                 <button type='submit' className='py-3 bg-[#C6A982] rounded-xl'>
-                    Sign up
+                    Sign in
                 </button>
                 <div className='flex items-center gap-3 justify-between opacity-50'>
                     <hr className='text-[#FFFFFF] w-1/4 sm:w-2/6' />
-                    <p className='sm:text-base text-sm'>Or sign up with</p>
+                    <p className='sm:text-base text-sm'>Or sign in with</p>
                     <hr className='text-[#FFFFFF] w-1/4 sm:w-2/6' />
                 </div>
                 <Wrapper className='flex justify-between items-center '>
@@ -113,10 +112,10 @@ const Signin = () => {
                 </Wrapper>
             </form>
 
-            <ModalFlow isOpen={isForgotOpen} onClose={() => setIsForgotOpen(false)} />
+            <Modal submit={submit} />
 
         </section>
     );
 };
 
-export default Signin;
+export default Forget;

@@ -52,8 +52,8 @@ const Signup = () => {
         });
     };
 
-    const onFinish = (event) => {
-        event.preventDefault(); // 🔥 ВАЖНО: предотвращает перезагрузку страницы
+    const onFinish = (e) => {
+        e.preventDefault();
         if (!formData.email || !formData.password || !formData.confirmPassword) {
             alert("Please fill in all fields!");
             return;
@@ -124,9 +124,8 @@ const Signup = () => {
                     </Button>
                 </Wrapper>
             </form>
-            {submit ?
-                <Modal formData={formData} />
-                : ''}
+
+            <Modal submit={submit} />
 
         </section>
     );

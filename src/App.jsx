@@ -6,6 +6,7 @@ import Main from './pages/Main/Main';
 import AboutCourse from './pages/AboutCourse/AboutCourse';
 import Signin from './pages/Signin/Signin';
 import Signup from './pages/Signup/Signup';
+import Forget from './pages/Signin/Forget';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='aboutoaa' element={<AboutCourse />} />
           <Route path='signup' element={<Signup />} />
           <Route path='signin' element={<Signin />} />
+          <Route path='forget' element={<Forget />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
