@@ -1,54 +1,64 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { PlayMusic } from '../../../ui/icons';
+import SideBar from './SideBar';
+import styled from 'styled-components';
+import { Share } from '../../../ui/icons';
+
+const WtSide = styled.div`
+    gap: 15px;
+    display: flex;
+`
+
+const Card = styled.div`
+    display: flex;
+    flex-direction:column;
+    gap:16px;
+`
 
 const First = () => {
-    const styles = {
-        img: {
-            height: "100vh",
-            backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('./images/Main/Background.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-        },
-        wrapper: {
-            height: '100%',
-            flexDirection: 'column',
-            position: 'relative', // Чтобы PlayMusic был внутри
-        },
-        text: {
-            position: "absolute !important",
-            top: "47%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 1, // Опускаем ниже текста
-        },
-        mainText: {
-            letterSpacing: '1.2px',
-            lineHeight: '110%',
-            fontWeight: 600,
-        }
-    };
-
     return (
-        <section style={styles.img} className='px-6'>
-            <div style={styles.wrapper} className='flex items-center justify-between relative h-full'>
-
-                <div></div>
-                <PlayMusic style={styles.playIcon} />
-
-                
-
-                <div className="w-full absolute" style={styles.text}>
-                    <h2 className="text-white text-center text-xl sm:text-xl md:text-xl lg:text-3xl pb-10">
-                        Welcome to the Online Arbitration Academy (OAA) dedicated <br />
-                        to providing training in the field of international arbitration.
-                    </h2>
-                </div>
-
-                <button className="bg-[#402d1d] text-white text-sm font-semibold 2xl lg:w-96 w-80 lg:py-4 sm:py-3 py-3  rounded-lg shadow-lg mb-10">
-                    Learn More
-                </button>
+        <section className='px-6 py-16'>
+            <div className='flex items-center justify-between'>
+                <h2 className='text-2xl uppercase font-medium'>About course</h2>
+                <Share />
             </div>
+            <WtSide className='pt-5'>
+                <div className='flex flex-col gap-2 w-3/4'>
+
+                    <img className='w-full' src="./images/AboutCourse/courseimg.png" alt="" />
+                    <div className='flex flex-col'>
+                        <h3>The description of course</h3>
+                        <p>The courses are clearly structured.  The lectures are electronically recorded by instructors (arbitration practitioners) and delivered online, with educational materials distributed to the participants at several days beforehand for thorough review before the lectures.  The lectures are followed by live workshops to consolidate the studied material, and the participants may also query the instructors regarding the subject.
+
+                            The course is delivered within a trimester - Michaelmas (from October to December), Hilary (from January to March) and Trinity (from April to June).
+
+                            At the end of the course all participants will receive a Certificate of Attendance.  In addition, each participant will be invited to sit an assessment test to include, inter alia, writing an essay of no longer than 500 words.  Successful participants will be awarded a Certificate of Proficiency in International Arbitration.
+
+                            Below you will find a tentative course syllabus.  It should be kept in mind however that the course contents, as well as the list of instructors, may be subject to modifications.</p>
+                    </div>
+
+                    <div className='flex flex-col'>
+                        <h3>Preliminary Reading</h3>
+                        <p>Participants are strongly encouraged to read the following books (latest editions) prior to the commencement of the course: </p>
+                        <div className='flex'>
+                            <Card>
+                                <img src="" alt="" />
+                                <div className=''>
+                                    <h4>International Arbitration: Law and Practice:</h4>
+                                    <p>Gary Born, (Wolters Kluwer);</p>
+                                </div>
+                            </Card>
+                        </div>
+                    </div>
+
+                    {/* <CourseInfo /> */}
+
+                    {/* <CourseTeacher /> */}
+
+
+
+                </div>
+                <SideBar />
+            </WtSide>
         </section>
     );
 };

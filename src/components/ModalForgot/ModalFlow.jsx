@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import ModalForgot from "./ModalForgot";
 import styled from "styled-components";
 import { TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const InputWrapper = styled.div`
   position: relative;
@@ -101,7 +101,12 @@ const ModalFlow = ({ isOpen, onClose }) => {
         }
     };
 
+    const navigate = useNavigate()
 
+    const onFinish = () => {
+        onClose()
+        navigate('/') 
+    }
 
     return (
         <ModalForgot isOpen={isOpen} onClose={onClose}>
@@ -113,8 +118,10 @@ const ModalFlow = ({ isOpen, onClose }) => {
                     >To recover your password, enter your phone number, <br /> to which a link will be sent to complete the recovery <br /> of access</p>
                     <InputWrapper>
                         <StyledInput
-                            type="password"
+                            type="email"
                             placeholder=""
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <Label>E-mail</Label>
                     </InputWrapper>
@@ -202,7 +209,7 @@ const ModalFlow = ({ isOpen, onClose }) => {
                         </InputWrapper>
 
 
-                        <button className="bg-[#402D1D] rounded-xl text-lg text-white py-3 mt-4 w-full font-semibold">
+                        <button className="bg-[#402D1D] rounded-xl text-lg text-white py-3 mt-4 w-full font-semibold" onClick={onFinish}>
                             Log in
                         </button>
 
