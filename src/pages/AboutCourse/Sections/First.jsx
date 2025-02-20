@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from './SideBar';
+import SideBar from '../components/SideBar';
 import styled from 'styled-components';
 import { Share } from '../../../ui/icons';
 
