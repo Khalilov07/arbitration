@@ -2,12 +2,14 @@ import React from 'react';
 import SideBar from '../components/SideBar';
 import styled from 'styled-components';
 import { Share } from '../../../ui/icons';
-import CourseInfo from '../components/CourseInfo';
-import Teachers from '../components/Teachers';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+
+import CourseInfo from './CourseInfo';
+import Teachers from './Teachers';
+import Training from './Training';
 
 const WtSide = styled.div`
    display: flex;
@@ -62,8 +64,8 @@ const First = () => {
                                 spaceBetween={5}
                                 modules={[Pagination]}
                                 breakpoints={{
-                                    0: { slidesPerView: 2 },  
-                                    768: { slidesPerView: 4 }  
+                                    0: { slidesPerView: 2 },
+                                    768: { slidesPerView: 4 }
                                 }}
                             >
                                 {[...Array(6)].map((_, index) => (
@@ -80,12 +82,9 @@ const First = () => {
                     </div>
 
                     <CourseInfo />
-
-                    <Teachers />
-
-
-
                 </div>
+                <Teachers />
+                <Training />
 
             </WtSide>
         </section>

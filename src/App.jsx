@@ -8,6 +8,7 @@ import Signin from './pages/Signin/Signin';
 import Signup from './pages/Signup/Signup';
 import Forget from './pages/Signin/Forget';
 import AboutCourse from './pages/AboutCourse/AboutCourse';
+import Profile from './pages/Profile/Profile';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='signin' element={<Signin />} />
           <Route path='forget' element={<Forget />} />
           <Route path='aboutcourse' element={<AboutCourse />} />
+          <Route path='profile' element={<Profile />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
