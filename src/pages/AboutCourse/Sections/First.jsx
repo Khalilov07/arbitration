@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import { Share } from '../../../ui/icons';
 import CourseInfo from '../components/CourseInfo';
 import Teachers from '../components/Teachers';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const WtSide = styled.div`
    display: flex;
@@ -18,19 +22,25 @@ const Card = styled.div`
     width: 24%;
 `
 
+const Images = styled.div`
+    @media(max-width: 1032px) {
+        flex-direction:column;
+    }
+`
+
 const First = () => {
     return (
-        <section className='px-8 py-16'>
+        <section className='px-4 sm:px-6 py-16'>
             <div className='flex items-center justify-between'>
                 <h2 className='text-2xl uppercase font-medium'>About course</h2>
                 <Share />
             </div>
             <WtSide className='pt-5'>
-                <div className='flex justify-between'>
-                    <img style={{ width: '68%' }} src="./images/AboutCourse/courseimg.png" alt="Course Overview" />
+                <Images className='flex justify-between'>
+                    <img className='w-full pb-5 sm:w-2/3' src="./images/AboutCourse/courseimg.png" alt="Course Overview" />
                     <SideBar />
-                </div>
-                <div className='flex flex-col gap-2 w-3/4' style={{ width: '68%' }} >
+                </Images>
+                <div className='flex flex-col gap-2 w-full sm:w-3/4'  >
                     <div className='flex flex-col mt-8'>
                         <h3 className='text-xl font-semibold'>The description of course</h3>
                         <p className='mt-5 font-normal text-[#5C5C5C]'>
@@ -47,13 +57,25 @@ const First = () => {
                         <h3 className='text-xl font-semibold mt-5'>Preliminary Reading</h3>
                         <p className='text-[#5C5C5C] pb-2 pt-4'>Participants are strongly encouraged to read the following books (latest editions) prior to the commencement of the course: </p>
                         <div className='flex'>
-                            <Card>
-                                <img src="./images/AboutCourse/Card.png" alt="" />
-                                <div className=''>
-                                    <h4 className='font-semibold'>International Arbitration: Law and Practice:</h4>
-                                    <p className='text-[#1E1E1E] opacity-80 pt-1 text-sm'>Gary Born, (Wolters Kluwer);</p>
-                                </div>
-                            </Card>
+                            <Swiper
+                                slidesPerView={4}
+                                spaceBetween={5}
+                                modules={[Pagination]}
+                                breakpoints={{
+                                    0: { slidesPerView: 2 },  
+                                    768: { slidesPerView: 4 }  
+                                }}
+                            >
+                                {[...Array(6)].map((_, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="pr-4">
+                                            <img src="./images/AboutCourse/Card.png" alt="" className="w-full" />
+                                            <h4 className="font-semibold mt-2">International Arbitration: Law and Practice:</h4>
+                                            <p className="text-[#1E1E1E] opacity-80 pt-1 text-sm">Gary Born, (Wolters Kluwer);</p>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
                     </div>
 

@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
     width: 30%;
+    @media(max-width: 1032px) {
+        width: 100%;
+    }
 `;
 
 const SidebarWrapper = styled.div`

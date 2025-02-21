@@ -149,5 +149,24 @@ export const Info = () => (
       <path d="M9.99984 13.8706V9.70394M9.99984 7.20394V7.19561M18.3332 10.5291C18.3332 15.1315 14.6022 18.8625 9.99984 18.8625C5.39746 18.8625 1.6665 15.1315 1.6665 10.5291C1.6665 5.92676 5.39746 2.1958 9.99984 2.1958C14.6022 2.1958 18.3332 5.92676 18.3332 10.5291Z" stroke="black" stroke-linecap="round" />
     </g>
   </svg>
+)
 
+export const TopAcc = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 14L11.2929 8.70711C11.6834 8.31658 12.3166 8.31658 12.7071 8.70711L18 14" stroke="#111111" stroke-width="1.5" stroke-linecap="round" />
+  </svg>
+)
+
+export const BottomAcc = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 10L12.7071 15.2929C12.3166 15.6834 11.6834 15.6834 11.2929 15.2929L6 10" stroke="#111111" stroke-width="1.5" stroke-linecap="round" />
+  </svg>
+)
+
+export const LockAcc = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 10V8C6 4.69 7 2 12 2C17 2 18 4.69 18 8V10" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12 18.5C13.3807 18.5 14.5 17.3807 14.5 16C14.5 14.6193 13.3807 13.5 12 13.5C10.6193 13.5 9.5 14.6193 9.5 16C9.5 17.3807 10.6193 18.5 12 18.5Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M17 22H7C3 22 2 21 2 17V15C2 11 3 10 7 10H17C21 10 22 11 22 15V17C22 21 21 22 17 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
 )
