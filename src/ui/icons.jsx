@@ -170,3 +170,45 @@ export const LockAcc = () => (
     <path d="M17 22H7C3 22 2 21 2 17V15C2 11 3 10 7 10H17C21 10 22 11 22 15V17C22 21 21 22 17 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   </svg>
 )
+
+export const BigLetter = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 5L10.7721 11.045C11.4943 11.6067 12.5057 11.6067 13.2279 11.045L21 5M5.2 20H18.8C19.9201 20 20.4802 20 20.908 19.782C21.2843 19.5903 21.5903 19.2843 21.782 18.908C22 18.4802 22 17.9201 22 16.8V7.2C22 6.07989 22 5.51984 21.782 5.09202C21.5903 4.71569 21.2843 4.40973 20.908 4.21799C20.4802 4 19.9201 4 18.8 4H5.2C4.07989 4 3.51984 4 3.09202 4.21799C2.71569 4.40973 2.40973 4.71569 2.21799 5.09202C2 5.51984 2 6.07989 2 7.2V16.8C2 17.9201 2 18.4802 2.21799 18.908C2.40973 19.2843 2.71569 19.5903 3.09202 19.782C3.51984 20 4.07989 20 5.2 20Z" stroke="#1E1E1E" stroke-width="1.5" />
+  </svg>
+
+)
+
+export const SmallLetter = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.7513 2.91683L6.28504 6.44307C6.70633 6.77074 7.29627 6.77074 7.71757 6.44307L12.2513 2.91683M3.03464 11.6668H10.968C11.6214 11.6668 11.9481 11.6668 12.1976 11.5397C12.4171 11.4278 12.5956 11.2493 12.7075 11.0298C12.8346 10.7803 12.8346 10.4536 12.8346 9.80016V4.20016C12.8346 3.54677 12.8346 3.22007 12.7075 2.97051C12.5956 2.75098 12.4171 2.57251 12.1976 2.46066C11.9481 2.3335 11.6214 2.3335 10.968 2.3335H3.03464C2.38124 2.3335 2.05454 2.3335 1.80498 2.46066C1.58546 2.57251 1.40698 2.75098 1.29513 2.97051C1.16797 3.22007 1.16797 3.54677 1.16797 4.20016V9.80016C1.16797 10.4536 1.16797 10.7803 1.29513 11.0298C1.40698 11.2493 1.58546 11.4278 1.80498 11.5397C2.05454 11.6668 2.38124 11.6668 3.03464 11.6668Z" stroke="#1E1E1E" />
+  </svg>
+)
+
+export const Account = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.1586 10.87C12.0586 10.86 11.9386 10.86 11.8286 10.87C9.44859 10.79 7.55859 8.84 7.55859 6.44C7.55859 3.99 9.53859 2 11.9986 2C14.4486 2 16.4386 3.99 16.4386 6.44C16.4286 8.84 14.5386 10.79 12.1586 10.87Z" stroke="#402D1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M7.15875 14.56C4.73875 16.18 4.73875 18.82 7.15875 20.43C9.90875 22.27 14.4188 22.27 17.1688 20.43C19.5888 18.81 19.5888 16.17 17.1688 14.56C14.4288 12.73 9.91875 12.73 7.15875 14.56Z" stroke="#402D1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+
+)
+
+export const Delete = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#D93030" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#D93030" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18.8484 9.14014L18.1984 19.2101C18.0884 20.7801 17.9984 22.0001 15.2084 22.0001H8.78844C5.99844 22.0001 5.90844 20.7801 5.79844 19.2101L5.14844 9.14014" stroke="#D93030" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M10.3281 16.5H13.6581" stroke="#D93030" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M9.5 12.5H14.5" stroke="#D93030" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+)
+
+export const Logout = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.7">
+      <path d="M8.89844 7.56023C9.20844 3.96023 11.0584 2.49023 15.1084 2.49023H15.2384C19.7084 2.49023 21.4984 4.28023 21.4984 8.75023V15.2702C21.4984 19.7402 19.7084 21.5302 15.2384 21.5302H15.1084C11.0884 21.5302 9.23844 20.0802 8.90844 16.5402" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.0011 12H3.62109" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M5.85 8.6499L2.5 11.9999L5.85 15.3499" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </svg>
+
+)
