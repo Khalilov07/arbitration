@@ -3,6 +3,34 @@ import { ArrowBottom, ArrowLongRight, ArrowTop } from '../../../ui/icons';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+const WrapperArrow = styled.div`
+@media(max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+`
+
+const Show = styled.div`
+@media(max-width: 1023px) {
+    display: block !important;
+   
+}
+`
+
+const Hidden = styled.div`
+@media(max-width:1023px) {
+display: none;
+}
+`
+
+const FormChange = styled.form`
+@media(max-width: 1023px) {
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+`
+
 const Six = () => {
 
     const [name, setName] = useState('');
@@ -44,33 +72,7 @@ const Six = () => {
         }
     }
 
-    const WrapperArrow = styled.div`
-        @media(max-width: 1023px) {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap-reverse;
-        }
-    `
 
-    const Show = styled.div`
-        @media(max-width: 1023px) {
-            display: block !important;
-           
-        }
-    `
-
-    const Hidden = styled.div`
-        @media(max-width:1023px) {
-        display: none;
-        }
-    `
-
-    const FormChange = styled.form`
-        @media(max-width: 1023px) {
-            width: 90% !important;
-            margin: 0 auto !important;
-        }
-    `
 
     return (
         <section className="flex flex-col lg:flex-row min-h-[80vh] bg-cover bg-center relative" style={styles.img}>
