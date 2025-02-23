@@ -19,7 +19,7 @@ const AccountSecurity = () => {
             return;
         }
         console.log("Form submitted:", formData);
-        
+
     };
 
     return (
@@ -37,8 +37,8 @@ const AccountSecurity = () => {
                 onChange={handleChange}
             />
 
+            <h2 className="pt-5 pb-2 font-semibold text-lg">Change password</h2>
             <div className='flex flex-col gap-4'>
-                <h2 className="">Change password</h2>
                 <InputField
                     label='New Password'
                     type='password'
