@@ -77,7 +77,7 @@ const Signup = () => {
 
 
     return (
-        <section style={styles.img} className='px-6 py-10 flex flex-col items-center justify-center text-[#FFF] text-center'>
+        <section style={styles.img} className='px-6 py-[140px] flex flex-col items-center justify-center text-[#FFF] text-center'>
             <p className='uppercase font-light'>START FOR FREE</p>
             <h2 className='font-medium text-3xl py-4'>Create a new account</h2>
             <p className='text-base'>Already have an account? <Link to='/signin' className='text-[#C6A982]'> <TextLink>Log in</TextLink> </Link></p>
