@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { BottomAcc, LockAcc, TopAcc } from "../../../ui/icons";
+import { BottomAcc, LockAcc, TopAcc, Zoom } from "../../../ui/icons";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Link } from "react-router-dom";
 
 const ButtonAcc = styled.button`
     @media(max-width: 1032px) {
@@ -32,7 +33,7 @@ const CourseInfo = () => {
         "Certification": {
             title: "Certificate",
             details: "Upon completing the course, you will have access to tests designed to assess your knowledge. To earn a certificate, you must achieve a score of at least 18 points. If you do not meet the required score, you will have the opportunity to retake the tests.",
-            image: "/images/CourseInfo/cert.png" 
+            image: "/images/CourseInfo/cert.png"
         }
     };
 
@@ -105,11 +106,31 @@ const CourseInfo = () => {
                         </div>
                     ))
                 ) : activeTab === "Seminars" ? (
-                    <div className="">
-                        <div className="">
+                    <>
+                        <div className="flex flex-col gap-4  p-[10px]" style={{ border: '0.5px solid grey' }}>
+                            <div className="sm:flex lg:flex justify-between ">
+                                <div className="flex items-center gap-2 ">
+                                    <LockAcc />
+                                    <p className="font-semibold ">Forum Shopping in International Arbitration</p>
+                                </div>
+                                <div className="flex gap-5 items-center sm:pt-0 pt-4 sm:pl-0 pl-7">
+                                    <p>23.07.2025</p>
+                                    <div className="rounded-[50%] w-1 h-1 bg-[#1E1E1E4D]">
 
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <p>16:00</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="flex justify-between items-center pl-8">
+                                <p className="text-xs sm:text-sm">Theacher: Prof. Franco Ferrari and Mr. Norair Babadjanian</p>
+                                <Link to='' className="flex items-center gap-2 py-2 px-4 bg-[#F0F0F0] text-[#1E1E1E] opacity-80 text-lg font-semibold rounded-xl"><LockAcc /> <Zoom /> Link</Link>
+                            </div>
                         </div>
-                    </div>
+                    </>
                 ) : (
                     <div className="w-full flex flex-col md:flex-row items-center ">
                         <img

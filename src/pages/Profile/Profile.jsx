@@ -27,19 +27,9 @@ const Profile = () => {
             <div className='flex flex-col md:flex-row pt-20 gap-6'>
                 {(!isMobile || activeTab === null) && <ProfileSidebar activeTab={activeTab} setActiveTab={setActiveTab} />}
 
-                {activeTab && isMobile && (
-                    <button
-                        className='mb-4 py-2 px-4 bg-gray-300 rounded-xl'
-                        onClick={() => setActiveTab(null)}
-                        style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1001 }}
-                    >
-                        ⬅ Back
-                    </button>
-                )}
-
                 {activeTab && (
                     <div
-                        className='flex flex-col bg-[#FFFFFF] px-5 py-6 md:w-2/3 w-full'
+                        className='flex flex-col bg-[#FFFFFF] px-0 sm:px-5 py-2 sm:py-6 md:w-2/3 w-full rounded-xl'
                         style={{
                             position: isMobile ? 'absolute' : 'static',
                             top: -30,
@@ -49,8 +39,8 @@ const Profile = () => {
                             zIndex: 1000
                         }}
                     >
-                        {activeTab === 'personalData' && <PersonalData />}
-                        {activeTab === 'accountSecurity' && <AccountSecurity />}
+                        {activeTab === 'personalData' && <PersonalData setActiveTab={setActiveTab} activeTab={activeTab} isMobile={isMobile} />}
+                        {activeTab === 'accountSecurity' && <AccountSecurity setActiveTab={setActiveTab} activeTab={activeTab} isMobile={isMobile} />}
                     </div>
                 )}
             </div>
