@@ -32,7 +32,7 @@ const Profile = () => {
                         className='flex flex-col bg-[#FFFFFF] px-0 sm:px-5 py-2 sm:py-6 md:w-2/3 w-full rounded-xl'
                         style={{
                             position: isMobile ? 'absolute' : 'static',
-                            top: -30,
+                            top: -35,
                             left: 0,
                             right: 0,
                             bottom: 0,

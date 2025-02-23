@@ -73,7 +73,7 @@ const Signin = () => {
 
 
     return (
-        <section style={styles.img} className='px-6 py-10 flex flex-col items-center justify-center text-[#FFF] text-center'>
+        <section style={styles.img} className='px-6 py-20 flex flex-col items-center justify-center text-[#FFF] text-center'>
             <p className='uppercase font-light'>START FOR FREE</p>
             <h2 className='font-medium text-3xl py-4'>Welcome!</h2>
             <p className='text-base'>Don't have an account? <Link to='/signup' className='text-[#FFF]'> <TextLink>Sign up</TextLink> </Link></p>
