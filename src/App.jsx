@@ -9,6 +9,7 @@ import Signup from './pages/Signup/Signup';
 import Forget from './pages/Signin/Forget';
 import AboutCourse from './pages/AboutCourse/AboutCourse';
 import Profile from './pages/Profile/Profile';
+import PassingCourse from './pages/PassingCourse/PassingCourse';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='forget' element={<Forget />} />
           <Route path='aboutcourse' element={<AboutCourse />} />
           <Route path='profile' element={<Profile />} />
+          <Route path='passingcourse' element={<PassingCourse />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>

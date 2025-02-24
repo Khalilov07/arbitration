@@ -42,7 +42,7 @@ const First = () => {
                     <img className='w-full pb-5 sm:w-2/3' src="./images/AboutCourse/courseimg.png" alt="Course Overview" />
                     <SideBar />
                 </Images>
-                <div className='flex flex-col gap-2 w-full sm:w-3/4'  >
+                <div className='flex flex-col gap-2 w-full sm:w-2/3'  >
                     <div className='flex flex-col mt-8'>
                         <h3 className='text-xl font-semibold'>The description of course</h3>
                         <p className='mt-5 font-normal text-[#5C5C5C]'>

@@ -223,5 +223,22 @@ export const Back = () => (
   <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M6.58579 1L1.29289 6.29289C0.902369 6.68342 0.902369 7.31658 1.29289 7.70711L6.58579 13" stroke="#222222" stroke-width="2" stroke-linecap="round" />
   </svg>
+)
+
+export const People = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.8">
+      <path d="M7.63314 9.05841C7.5498 9.05008 7.4498 9.05008 7.35814 9.05841C5.3748 8.99175 3.7998 7.36675 3.7998 5.36675C3.7998 3.32508 5.4498 1.66675 7.4998 1.66675C9.54147 1.66675 11.1998 3.32508 11.1998 5.36675C11.1915 7.36675 9.61647 8.99175 7.63314 9.05841Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13.6747 3.33325C15.2914 3.33325 16.5914 4.64159 16.5914 6.24992C16.5914 7.82492 15.3414 9.10825 13.7831 9.16659C13.7164 9.15825 13.6414 9.15825 13.5664 9.16659" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M3.4666 12.1333C1.44993 13.4833 1.44993 15.6833 3.4666 17.0249C5.75827 18.5583 9.5166 18.5583 11.8083 17.0249C13.8249 15.6749 13.8249 13.4749 11.8083 12.1333C9.52494 10.6083 5.7666 10.6083 3.4666 12.1333Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.2832 16.6667C15.8832 16.5417 16.4499 16.3001 16.9165 15.9417C18.2165 14.9667 18.2165 13.3584 16.9165 12.3834C16.4582 12.0334 15.8999 11.8001 15.3082 11.6667" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </svg>
+)
+
+export const Warning = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.99967 10.6731V7.33976M7.99967 5.33976V5.3331M14.6663 7.99992C14.6663 11.6818 11.6816 14.6666 7.99967 14.6666C4.31778 14.6666 1.33301 11.6818 1.33301 7.99992C1.33301 4.31802 4.31778 1.33325 7.99967 1.33325C11.6816 1.33325 14.6663 4.31802 14.6663 7.99992Z" stroke="#D00000" stroke-linecap="round" />
+  </svg>
 
 )
